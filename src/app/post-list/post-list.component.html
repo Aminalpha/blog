@@ -1,1 +1,5 @@
-<p>post-list works!</p>
+<div class="blogs" *ngFor="let post of postLists ">
+  <mat-card>
+    <app-post-list-item [post] = "post"></app-post-list-item>
+  </mat-card>
+</div>
