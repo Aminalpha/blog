@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <span routerLinkActive="active" class="navbar-blog">
+    <a mat-button routerLink="/posts">{{title}}</a>
+  </span>
+  <div >
+    <span routerLinkActive="active">
+      <a mat-button routerLink="post/new">Create new post</a>
+    </span>
+    <span routerLinkActive="active">
+      <a mat-button routerLink="auth/signup">Créer un compte</a>
+    </span>
+    <span routerLinkActive="active">
+      <a mat-button routerLink="auth/signin" *ngIf="!isAuth">Connexion</a>
+    </span>
+    <span routerLinkActive="active">
+      <a mat-button (click)="onSignOut()" *ngIf="isAuth">Déconnexion</a>
+    </span>
+  </div>
+</mat-toolbar>

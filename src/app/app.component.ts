@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-
-interface PostList {
-  title: string;
-  content: string;
-  loveIts: number;
-  create_at: Date;
-}
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -13,29 +7,21 @@ interface PostList {
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent{
-  title = "My blog";
-    postLists: Array<PostList> = [
-      {title: "What is Lorem Ipsum?",
-      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-      loveIts: 0,
-      create_at: new Date(),
-      },
-      {title: "Why do we use it?",
-      content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
-      loveIts: 0,
-      create_at: new Date(),
-      },
-      {title: "Where does it come from?",
-      content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
-      loveIts: 0,
-      create_at: new Date(),
-      },
-      {title: "Where can I get some",
-      content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable",
-      loveIts: 0,
-      create_at: new Date(),
-      }
-    ];
 
+    constructor() {
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyADkEdqyMBrABxq8LtAM7ZTBePcjhOhuIU",
+        authDomain: "blogs-69b41.firebaseapp.com",
+        databaseURL: "https://blogs-69b41.firebaseio.com",
+        projectId: "blogs-69b41",
+        storageBucket: "blogs-69b41.appspot.com",
+        messagingSenderId: "554096457959",
+        appId: "1:554096457959:web:7e2cf470b19229a2084a42"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+    }
 
 }

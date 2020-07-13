@@ -1,0 +1,16 @@
+<h2>Nouveau Post</h2>
+<form [formGroup]="formBlog" (ngSubmit)="onSave()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Content</mat-label>
+    <input matInput formControlName="content">
+  </mat-form-field>
+  <br>
+  <button mat-stroked-button type="submit" color="accent">Enregister</button>
+
+</form>

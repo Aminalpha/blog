@@ -1,5 +1,6 @@
-<div class="blogs" *ngFor="let post of postLists ">
+<div class="blogs" *ngFor="let post of postLists; let i= index ">
   <mat-card>
-    <app-post-list-item [post] = "post"></app-post-list-item>
+    <app-post-list-item [post] = "post" [i]="i"></app-post-list-item>
   </mat-card>
 </div>
+

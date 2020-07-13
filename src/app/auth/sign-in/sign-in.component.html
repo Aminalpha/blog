@@ -1,0 +1,16 @@
+<h2>Sign In</h2>
+<form [formGroup]="formBlog" (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput [type]="hide?'password':'text'" formControlName="password">
+  </mat-form-field>
+  <br>
+  <button mat-stroked-button type="submit" color="accent">Connexion</button>
+
+</form>

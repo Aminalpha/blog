@@ -6,9 +6,13 @@
   {{ post.content }}
 </mat-card-content>
 
-<mat-card-actions>
-  <button mat-raised-button color="primary">Love it!</button>
+<!--<mat-card-actions>
+   <button mat-raised-button color="primary">Love it!</button>
   <button mat-raised-button color="warn">Don't love it!</button>
+</mat-card-actions>-->
+<mat-card-actions>
+  <button mat-raised-button color="primary" (click)="onView(i)">View</button>
+  <button mat-raised-button color="warn" (click)="onDelete(post)">Delete</button>
 </mat-card-actions>
 
 
